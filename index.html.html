@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alexandre Schwaab, chargé de communication 360 à Strasbourg</title>
+<meta name="description" content="Portfolio d’Alexandre Schwaab : community management, stratégie marketing digitale, SEO, emailing, branding et print. Basé à Strasbourg.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alexandreschwaab.fr">
+<meta property="og:title" content="Alexandre Schwaab, chargé de communication 360">
+<meta property="og:description" content="Stratégie, contenu, emailing et branding : le portfolio d’Alexandre Schwaab.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14'/%3E%3Ctext x='32' y='44' font-size='30' font-weight='800' text-anchor='middle' fill='%23ff4d8d' font-family='sans-serif'%3EAS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&amp;family=Instrument+Sans:wght@400;500&amp;display=swap">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Alexandre Schwaab","url":"https://alexandreschwaab.fr","jobTitle":"Chargé de communication 360","address":{"@type":"PostalAddress","addressLocality":"Strasbourg","addressCountry":"FR"}}</script>
+<style>
+:root{--fg:#f4f4f2;--mut:#8c8c88;--line:rgba(255,255,255,.14);--a:#ff4d8d;--b:#ffa23c;--d:'Bricolage Grotesque',system-ui,sans-serif;--s:'Instrument Sans',system-ui,sans-serif;--pad:clamp(1.25rem,4vw,3rem);--ease:cubic-bezier(.2,.8,.2,1);color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#000;color:var(--fg);font:400 1.0625rem/1.6 var(--s);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:left}
+ul{list-style:none}
+::selection{background:var(--a);color:#000}
+:focus-visible{outline:2px solid var(--a);outline-offset:4px}
+
+/* Barre de progression */
+.bar{position:fixed;inset:0 0 auto;height:2px;background:linear-gradient(90deg,var(--a),var(--b));transform:scaleX(0);transform-origin:0 50%;z-index:60}
+
+/* Navigation */
+nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:1.25rem var(--pad);color:#fff;mix-blend-mode:difference}
+nav b{font:800 1.1rem var(--d);letter-spacing:-.02em}
+nav ul{display:flex;gap:2rem;font-size:.95rem}
+nav ul a{padding-bottom:3px;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .4s var(--ease)}
+nav ul a:hover{background-size:100% 1px}
+.pill{border:1px solid #fff;border-radius:99px;padding:.5rem 1.1rem;font-size:.95rem;transition:background .3s,color .3s}
+.pill:hover{background:#fff;color:#000}
+
+/* Titres à révélation par masque */
+[data-split] .ln{display:block;overflow:hidden;padding:.06em 0 .12em;margin:-.06em 0 -.12em}
+[data-split] .ln>span{display:block;transform:translateY(105%);transition:transform 1.1s var(--ease)}
+[data-split].in .ln>span{transform:none}
+[data-split] .ln:nth-child(2)>span{transition-delay:.1s}
+[data-split] .ln:nth-child(3)>span{transition-delay:.2s}
+
+/* Hero : la lumière suit le curseur et colore le texte */
+.hero{position:relative;overflow:hidden;background:#000;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:8rem var(--pad) 2.5rem}
+h1{font:800 clamp(2.8rem,10.5vw,10rem)/.92 var(--d);letter-spacing:-.045em}
+.blob{position:absolute;top:0;left:0;width:520px;height:520px;border-radius:50%;pointer-events:none;background:radial-gradient(closest-side,var(--a),var(--b) 55%,rgba(255,162,60,0));mix-blend-mode:multiply}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-top:clamp(2rem,5vw,4rem);color:var(--mut)}
+.hero-foot p{max-width:44ch}
+.cue{padding:0 1rem}
+.cue i{display:block;width:1px;height:64px;background:linear-gradient(var(--fg),transparent);transform-origin:top;animation:drip 2.2s var(--ease) infinite}
+@keyframes drip{0%{transform:scaleY(0);opacity:1}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+
+/* Bandeau défilant */
+.marq{overflow:hidden;border-block:1px solid var(--line);padding:1.2rem 0}
+.track{display:flex;width:max-content;animation:mq 40s linear infinite}
+.marq:hover .track{animation-play-state:paused}
+.track span{display:flex;align-items:center;padding-right:2.5rem;font:800 clamp(1.6rem,4.5vw,3.5rem)/1 var(--d);letter-spacing:-.03em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.55)}
+.track span::after{content:"";flex:none;width:.4em;height:.4em;margin-left:2.5rem;border-radius:50%;background:var(--a)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* Chiffres */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;padding:clamp(4rem,9vw,8rem) var(--pad) 0}
+.stats b{display:block;font:800 clamp(3rem,8vw,7rem)/1 var(--d);letter-spacing:-.05em}
+.stats p{color:var(--mut);max-width:18ch}
+.stats .src{grid-column:1/-1;max-width:none;font-size:.9rem}
+
+/* Sections */
+.sec{padding:clamp(4rem,10vw,9rem) var(--pad)}
+h2{font:800 clamp(2.2rem,6.5vw,6rem)/.95 var(--d);letter-spacing:-.04em;margin-bottom:clamp(2rem,5vw,4rem)}
+
+/* Projets : liste typographique, aperçu au survol, détail au clic */
+.list{border-top:1px solid var(--line)}
+.row{border-bottom:1px solid var(--line);transition:opacity .4s}
+.list:hover .row:not(:hover):not(.open){opacity:.3}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:2rem;width:100%;padding:1.6rem 0}
+.t{font:800 clamp(2rem,6vw,5.5rem)/1 var(--d);letter-spacing:-.04em;transition:transform .5s var(--ease)}
+.head:hover .t,.open .t{transform:translateX(1rem)}
+.m{max-width:26ch;color:var(--mut);font-size:.95rem;text-align:right}
+.body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--ease)}
+.open .body{grid-template-rows:1fr}
+.body>div{overflow:hidden}
+.body p{max-width:60ch;padding-bottom:1.2rem;color:var(--mut)}
+.body a{display:inline-block;margin-bottom:2rem;padding-bottom:2px;border-bottom:1px solid var(--a)}
+.peek{position:fixed;top:0;left:0;z-index:40;width:260px;height:340px;display:flex;align-items:flex-end;padding:1rem;border-radius:12px;pointer-events:none;color:#000;font:700 1.3rem/1 var(--d);opacity:0;scale:.85;transition:opacity .3s,scale .4s var(--ease)}
+.peek.on{opacity:1;scale:1}
+
+/* Parcours */
+.tl{border-top:1px solid var(--line)}
+.tl li{display:grid;grid-template-columns:minmax(7rem,1fr) 2fr 3fr;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.tl span{color:var(--mut)}
+.tl b{font:700 1.4rem/1.2 var(--d);letter-spacing:-.02em}
+
+/* Contact */
+.contact{padding-top:clamp(6rem,14vw,12rem)}
+.contact p{margin-bottom:1.5rem;color:var(--mut);font-size:1.2rem}
+.mail{display:inline-block;font:800 clamp(1.4rem,6.2vw,6.5rem)/1.1 var(--d);letter-spacing:-.04em;overflow-wrap:anywhere;background:linear-gradient(90deg,var(--a),var(--b)) 0 100%/100% 6px no-repeat;transition:background-size .5s var(--ease),color .5s}
+.mail:hover{background-size:100% 100%;color:#000}
+.links{display:flex;flex-wrap:wrap;gap:2rem;margin-top:2.5rem}
+.links a{padding-bottom:2px;border-bottom:1px solid var(--line);transition:border-color .3s}
+.links a:hover{border-color:var(--a)}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding:1.5rem var(--pad) 2rem;border-top:1px solid var(--line);color:var(--mut);font-size:.9rem}
+
+@media(max-width:800px){.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){nav ul{display:none}.head{flex-direction:column;gap:.4rem}.m{text-align:left}.tl li{grid-template-columns:1fr;gap:.25rem}}
+@media(pointer:coarse){.peek{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}[data-split] .ln>span{transform:none}.blob,.peek{display:none}}
+</style>
+<noscript><style>[data-split] .ln>span{transform:none}</style></noscript>
+</head>
+<body>
+<div class="bar"></div>
+
+<nav>
+  <b>Alexandre Schwaab</b>
+  <ul><li><a href="#projets">Projets</a></li><li><a href="#parcours">Parcours</a></li></ul>
+  <a class="pill" href="#contact">Me contacter</a>
+</nav>
+
+<header class="hero" id="top">
+  <h1 data-split><span class="ln"><span>Je fais parler</span></span><span class="ln"><span>les marques</span></span><span class="ln"><span>en 360°.</span></span></h1>
+  <div class="blob"></div>
+  <div class="hero-foot">
+    <p>Chargé de communication et de marketing digital à Strasbourg. Stratégie, contenu, emailing et branding, du brief jusqu’à la conversion.</p>
+    <a class="cue" href="#projets" aria-label="Voir les projets"><i></i></a>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div class="track">
+  <span>Community management</span><span>Stratégie digitale</span><span>Emailing</span><span>SEO</span><span>Google Ads</span><span>Branding</span><span>Packaging</span><span>Print</span><span>Web</span>
+</div></div>
+
+<section class="stats">
+  <div><b data-n="207">0</b><p>publications en un an</p></div>
+  <div><b data-n="44">0</b><p>campagnes emailing</p></div>
+  <div><b data-n="40">0</b><p>conversions en deux mois</p></div>
+  <div><b data-n="8">0</b><p>comptes de réseaux sociaux animés</p></div>
+  <p class="src">Chiffres de mon alternance chez Idemoov, 2024 à 2026.</p>
+</section>
+
+<section class="sec" id="projets">
+  <h2 data-split><span class="ln"><span>Projets</span></span></h2>
+  <!-- Pour afficher un visuel au survol : ajoute data-img="images/mon-visuel.jpg" sur le <li> (sinon le dégradé --g est utilisé). -->
+  <ul class="list">
+    <li class="row open" style="--g:linear-gradient(135deg,#ff4d8d,#ffa23c)">
+      <button class="head" aria-expanded="true"><span class="t">Idemoov</span><span class="m">Community management et stratégie digitale, 2024 à 2026</span></button>
+      <div class="body"><div><p>Animation de six comptes LinkedIn et de deux pages Facebook, campagnes emailing et création de supports d’aide à la vente.</p><a href="#contact">Discuter de ce projet</a></div></div>
+    </li>
+    <li class="row" style="--g:linear-gradient(135deg,#ffa23c,#ff4d8d)">
+      <button class="head" aria-expanded="false"><span class="t">Hopfield</span><span class="m">Blog et SEO multilingue, Bio Brasseurs</span></button>
+      <div class="body"><div><p>Blog en français, anglais et espagnol sur WordPress, Elementor et Polylang, avec quatre articles optimisés pour le référencement et un habillage de marque sur mesure.</p><a href="#contact">Discuter de ce projet</a></div></div>
+    </li>
+    <li class="row" style="--g:linear-gradient(135deg,#7b61ff,#ff4d8d)">
+      <button class="head" aria-expanded="false"><span class="t">Google Ads</span><span class="m">Campagnes Search, France et Espagne</span></button>
+      <div class="body"><div><p>Campagnes Search Google Ads sur les marchés français et espagnol. Ajoute ici tes résultats : budget, clics, conversions.</p><a href="#contact">Discuter de ce projet</a></div></div>
+    </li>
+    <li class="row" style="--g:linear-gradient(135deg,#ff4d8d,#7b61ff)">
+      <button class="head" aria-expanded="false"><span class="t">Print et packaging</span><span class="m">Étiquettes R-KOMBUCHA et supports de marque</span></button>
+      <div class="body"><div><p>Refonte de l’étiquette 33 cl (canette et bouteille en verre) en six langues, sous-bocks, porte-clés, présentoir PLV, affiches et kakémono.</p><a href="#contact">Discuter de ce projet</a></div></div>
+    </li>
+    <li class="row" style="--g:linear-gradient(135deg,#ffa23c,#7b61ff)">
+      <button class="head" aria-expanded="false"><span class="t">Projets ISEG</span><span class="m">Master Marketing Digital</span></button>
+      <div class="body"><div><p>Plus de cinq projets de marque, dont Mercedes Kroely, Orange, LEGO, l’Office des Sports de Strasbourg et le SAMU Social de Paris.</p><a href="#contact">Discuter de ce projet</a></div></div>
+    </li>
+  </ul>
+</section>
+
+<section class="sec" id="parcours">
+  <h2 data-split><span class="ln"><span>Parcours</span></span></h2>
+  <ul class="tl">
+    <li><span>Depuis 2026</span><b>Bio Brasseurs</b><span>Apprenti Manager stratégie marketing digital et communication</span></li>
+    <li><span>2024 à 2026</span><b>Idemoov</b><span>Community Manager et stratégie marketing digital, en alternance</span></li>
+    <li><span>2026</span><b>ISEG Strasbourg</b><span>Master Marketing Digital</span></li>
+    <li><span>2022 à 2024</span><b>Sofitel Strasbourg Grande-Île</b><span>Chargé polyvalent en restauration</span></li>
+    <li><span>Formation</span><b>EU Business School Barcelone</b><span>Master Management, Magna Cum Laude, en anglais</span></li>
+    <li><span>Formation</span><b>Glion, Suisse</b><span>Bachelor Management hôtelier et Business Administration, Honors</span></li>
+    <li><span>Langues</span><b>Français, anglais</b><span>Français natif, anglais C2, espagnol A2, allemand A2</span></li>
+  </ul>
+</section>
+
+<section class="sec contact" id="contact">
+  <h2 data-split><span class="ln"><span>Un projet en tête ?</span></span></h2>
+  <p>Écrivez-moi pour échanger sur un projet, une collaboration ou une opportunité.</p>
+  <!-- À REMPLACER : e-mail, profil LinkedIn, et dépose ton CV à la racine sous le nom cv-alexandre-schwaab.pdf -->
+  <a class="mail" href="mailto:alexandre.schwaab@gmail.com">contact@alexandreschwaab.fr</a>
+  <div class="links">
+    <a href="https://www.linkedin.com/in/alexandre-schwaab-03a638141/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="cv-alexandre-schwaab.pdf">CV en PDF</a>
+  </div>
+</section>
+
+<footer><span>© 2026 Alexandre Schwaab, Strasbourg</span><a href="#top">Retour en haut</a></footer>
+
+<div class="peek" aria-hidden="true"></div>
+
+<script>
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const fine=matchMedia('(pointer:fine)').matches,rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+// Bandeau : on double le contenu pour une boucle sans coupure
+const tr=$('.track');tr.innerHTML+=tr.innerHTML;
+
+// Titres : révélation à l’entrée dans l’écran
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.3});
+$$('[data-split]').forEach(el=>io.observe(el));
+
+// Chiffres : compteur au moment où ils apparaissent
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);const el=e.target,n=+el.dataset.n,s=performance.now();(function f(t){const p=rm?1:Math.min((t-s)/1600,1);el.textContent=Math.round(n*(1-(1-p)**4));if(p<1)requestAnimationFrame(f)})(s)}),{threshold:.6});
+$$('[data-n]').forEach(el=>co.observe(el));
+
+// Barre de progression
+const bar=$('.bar');
+addEventListener('scroll',()=>{bar.style.transform=`scaleX(${scrollY/((document.documentElement.scrollHeight-innerHeight)||1)})`},{passive:true});
+
+// Projets : détail au clic, aperçu qui suit la souris
+const peek=$('.peek');
+$$('.row').forEach(r=>{
+  const h=$('.head',r);
+  h.addEventListener('click',()=>h.setAttribute('aria-expanded',r.classList.toggle('open')));
+  h.addEventListener('pointerenter',()=>{
+    peek.style.background=r.dataset.img?`url(${r.dataset.img}) center/cover`:r.style.getPropertyValue('--g');
+    peek.textContent=r.dataset.img?'':$('.t',r).textContent;
+    peek.classList.add('on');
+  });
+  h.addEventListener('pointerleave',()=>peek.classList.remove('on'));
+});
+
+// Hero : la lumière suit le curseur (dérive automatique sur mobile)
+const hero=$('.hero'),blob=$('.blob');
+let tx=innerWidth*.7,ty=innerHeight*.35,x=tx,y=ty,px=0,py=0,qx=0,qy=0;
+addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;tx=e.clientX;ty=e.clientY-hero.getBoundingClientRect().top;px=e.clientX;py=e.clientY});
+if(!rm)(function loop(t){
+  if(!fine){tx=innerWidth*(.5+.3*Math.sin(t/2300));ty=innerHeight*(.45+.2*Math.cos(t/3100))}
+  x+=(tx-x)*.07;y+=(ty-y)*.07;qx+=(px-qx)*.14;qy+=(py-qy)*.14;
+  blob.style.transform=`translate(${x-260}px,${y-260}px)`;
+  peek.style.transform=`translate(${qx+28}px,${qy-170}px)`;
+  requestAnimationFrame(loop);
+})(0);
+</script>
+</body>
+</html>
